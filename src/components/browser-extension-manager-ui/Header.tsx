@@ -3,9 +3,9 @@ import iconSun from "../../assets/images/icon-sun.svg"
 function Header(){
   return (
     <header className="flex justify-between p-2 bg-white dark:bg-base-300 rounded-lg">
-      <img src="/browser-extension-manager-ui/images/logo.svg" className=""/>
+      <img src="browser-extension-manager-ui/images/logo.svg" alt="Logo"/>
 
-      <button className="btn btn-circle btn-secondary outline-secondary focus:outline-1">
+      <button className="btn btn-circle bg-neutral-800 outline-secondary focus:outline-1">
         <img src={iconSun.src}/>
       </button>
     </header>

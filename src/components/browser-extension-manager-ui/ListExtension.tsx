@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react"
-import data from "../../assets/browser-extension-manager-ui/data.json"
+import { useRef, useState } from "react"
 import type { StatusFilter } from "./StatusFilter"
+import data from "../../assets/browser-extension-manager-ui/data.json"
 
 interface ListExtensionProps {
   filter: StatusFilter
@@ -35,7 +35,7 @@ function ListExtension({filter}: ListExtensionProps) {
 
   return (
     <>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         { extensions.map((extension, i) => {
           if (filter === "active" && !extension.isActive) return
           if (filter === "inactive" && extension.isActive) return
@@ -82,7 +82,7 @@ function Extension({data, showModal, toggleIsActive}:ExtensionProps){
   return (
     <div className="card bg-white dark:bg-base-300">
       <div className="card-body flex flex-row gap-4">
-        <img src={data.logo} className="size-12"/>
+        <img src={data.logo} alt={data.name} className="size-12"/>
 
         <div className="space-y-0.5">
           <p className="card-title">{ data.name }</p>

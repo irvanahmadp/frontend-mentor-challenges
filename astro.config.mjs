@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://irvanahmadp.github.io',
-  base: 'frontend-mentor-challenges',
+  base: '/frontend-mentor-challenges/',
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
