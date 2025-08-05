@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import type { StatusFilter } from "./StatusFilter"
 import data from "../../assets/browser-extension-manager-ui/data.json"
+import PublicImage from "../PublicImage"
 
 interface ListExtensionProps {
   filter: StatusFilter
@@ -82,7 +83,7 @@ function Extension({data, showModal, toggleIsActive}:ExtensionProps){
   return (
     <div className="card bg-white dark:bg-base-300">
       <div className="card-body flex flex-row gap-4">
-        <img src={data.logo} alt={data.name} className="size-12"/>
+        <PublicImage src={data.logo} alt={data.name} className="size-12"/>
 
         <div className="space-y-0.5">
           <p className="card-title">{ data.name }</p>
