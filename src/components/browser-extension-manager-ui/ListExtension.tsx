@@ -54,8 +54,8 @@ function ListExtension({filter}: ListExtensionProps) {
           <div className="modal-action">
             <form method="dialog" className="space-x-2">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn bg-gray-700">Close</button>
-              <button className="btn bg-red-500" onClick={handleRemoveExtension}>Delete</button>
+              <button className="btn dark:bg-gray-700">Close</button>
+              <button className="btn bg-red-500 text-primary-content" onClick={handleRemoveExtension}>Delete</button>
             </form>
           </div>
         </div>
@@ -93,7 +93,7 @@ function Extension({data, showModal, toggleIsActive}:ExtensionProps){
       <div className="card-actions px-4 pb-4 flex justify-between items-center">
         <button
           onClick={() => showModal(data.name)}
-          className="btn btn-sm btn-outline rounded-2xl hover:bg-secondary"
+          className="btn btn-sm btn-outline border-neutral-400 text-neutral-700 dark:text-neutral-300 rounded-2xl hover:bg-secondary hover:border-transparent hover:text-white"
         >
           Remove
         </button>

@@ -1,2 +1,11 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @plugin "daisyui";
+
+@plugin "daisyui/theme" {
+    name: "light";
+
+    --root-bg: "#ecf3fd";
+}
